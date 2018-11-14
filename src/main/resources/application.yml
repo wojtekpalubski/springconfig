@@ -1,0 +1,29 @@
+ake:
+    host: ymlhost
+    port: ymlport
+    protokol: ymlprot
+    konfig:
+      # parametry połączenia
+      imie: jan
+      nazwisko: kowalski
+      haslo: haslo uzytkownika
+    role:
+      - uzytkownik
+      - administrator
+    parametry:
+      - nazwa: parametr1
+        wartosc: wartosc1
+      - nazwa: parametr2
+        wartosc: wartosc2
+      - wartosc: wartosc3
+        nazwa: parametr3
+
+# actuator
+management:
+  endpoints:
+    web:
+      base-path: /admin
+      exposure:
+        include: '*'
+  server:
+    port: 8081
