@@ -1,11 +1,11 @@
 ake:
-  host: ymlhost
-  port: ymlport
-  protokol: ymlprot
+  host: qq2host
+  port: qq2port
+  protokol: qq2prot
   konfig:
     # parametry połączenia
     imie: jan
-    nazwisko: kowalski
+    nazwisko: qqwalski
     haslo: haslo uzytkownika
   role:
   - uzytkownik
@@ -17,8 +17,9 @@ ake:
     wartosc: wartosc2
   - wartosc: wartosc3
     nazwa: parametr3
-  - wartosc: wartosc5
-    nazwa: parametr5
+  - wartosc: wartosc4
+    nazwa: parametr4
+
 # actuator
 management:
   endpoints:
