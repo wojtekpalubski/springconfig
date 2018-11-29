@@ -31,6 +31,7 @@ public class AkeConfig {
     private List<String> role = Arrays.asList("rola1", "rola2");
     private List<Parametr> parametry;
     private Long liczba = 100L;
+    private Long liczba2 = 102L;
 
     @PostConstruct
     public void printConfig() {

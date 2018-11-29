@@ -19,6 +19,11 @@ ake:
     nazwa: parametr3
   - wartosc: wartosc5
     nazwa: parametr5
+
+ake2:
+  wartosc1: ake2wartosc1yml
+  wartosc2: ake2wartosc2yml
+
 # actuator
 management:
   endpoints:
