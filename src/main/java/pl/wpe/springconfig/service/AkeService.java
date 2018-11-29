@@ -4,9 +4,12 @@ import io.micrometer.core.instrument.MeterRegistry;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.wpe.springconfig.config.Ake3Config;
 import pl.wpe.springconfig.config.AkeConfig;
+import pl.wpe.springconfig.config.AkeValueConfig;
 import pl.wpe.springconfig.config.Parametr;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service
@@ -14,6 +17,12 @@ import java.util.List;
 public class AkeService {
     @Autowired
     private AkeConfig config;
+
+    @Autowired
+    private AkeValueConfig akeValueConfig;
+
+    @Autowired
+    private Ake3Config ake3Config;
 
     @Autowired
     private MeterRegistry meterRegistry;
@@ -39,5 +48,15 @@ public class AkeService {
         wyjatekService.throwWyjatek();
         meterRegistry.counter("AkeService","getParametryOK","ilosc").increment();
         return config.getParametry();
+    }
+
+    @Override
+    public String toString() {
+        return config+" "+akeValueConfig+" "+akeValueConfig;
+    }
+
+    @PostConstruct
+    public void printConfig() {
+        log.info(this.toString());
     }
 }
